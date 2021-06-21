@@ -4,7 +4,6 @@
 //Return 0 if no zeros in between ones
 //ITERATIONS
 function solution (N: number): number {
-
   // Tests if our value is an integer
   if (N === parseInt(String(N), 10) && N >= 1 && N < 2147483647) {
     // Convert to binary
