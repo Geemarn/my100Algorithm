@@ -23,7 +23,6 @@ function solutionX(S) {
     "(": ")",
     "[": "]"
   };
-
   let closedBrackets = ["}", ")", "]"];
 
   let stack = [];
@@ -46,10 +45,48 @@ console.log(brackets('{[[()()]]}'));
 
 //fish
 function fish(A, B) {
-  let combineArray= [];
+  let downStream = [];
+  let upStream = [];
+  let direction;
+
   for(let i = 0; i < A.length; i++) {
-    if(A[i]){}
+    direction = B[i];
+    if (direction === 0) {
+      while (downStream.length > 0) {
+        let d = downStream.pop();
+        if (d > A[i]) {
+          downStream.push(d);
+          break
+        }
+      }
+      if (downStream.length === 0) {
+        upStream.push(A[i])
+      }
+    } else {
+      downStream.push(A[i])
+    }
   }
+  return downStream.length + upStream.length
 }
 
 console.log(fish([4,3,2,1,5],[0,1,0,0,0]));
+
+function fish2(A, B) {
+  let downStream= [];
+  let upStream = [];
+  let direction;
+  for (let i = 0; i < A.length; i++) {
+    if (B[i] === 0) {
+        upStream.push(B[i])
+
+
+    } else {
+      downStream.push(B[i])
+    }
+  }
+  console.log(upStream);
+  console.log(downStream);
+  return upStream
+}
+
+console.log(fish2([4,3,2,1,5],[0,1,0,0,0]));
