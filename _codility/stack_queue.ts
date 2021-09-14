@@ -90,3 +90,32 @@ function fish2(A, B) {
 }
 
 console.log(fish2([4,3,2,1,5],[0,1,0,0,0]));
+
+function Nested(S) {
+  let counter = 0;
+  for(let i = 0; i < S.length; i++) {
+     switch (S[i]) {
+       case '(':
+         counter++;
+         break;
+       case ')':
+         counter--;
+         break
+     }
+    if (counter < 0) return 0
+   }
+  return counter === 0 ? 1 : 0
+}
+
+console.log(Nested("(()(())())"));
+console.log(Nested("())"));
+
+
+function Denominator(A) {
+  let count = 0;
+  for(let i = 0; i < A.length; i++) {
+    if()
+  }
+}
+
+console.log([2,3,2,4,5,6,7,3])
