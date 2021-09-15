@@ -1,4 +1,8 @@
 function compareIntegers(a: string, b: string): string {
+    if (parseInt(a) > parseInt(b)) return 'greater';
+    else{
+      return 'less';
+    }
 
 }
 

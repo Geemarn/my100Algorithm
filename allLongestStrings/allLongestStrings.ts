@@ -1,17 +1,11 @@
-function allLongestStrings(arrs: string[]): string[] {
-  let logestArrStr = 0;
-  let longestArr = [];
-  arrs.forEach(
-    (arr: string) =>
-      (logestArrStr = logestArrStr > arr.length ? logestArrStr : arr.length)
-  );
+function allLongestString(array: string[]): string[] {
+  let longString = array.sort((a, b) => {
+    return b.length - a.length;
+  })[0].length;
 
-  arrs.forEach((arr: string) => {
-    if (logestArrStr === arr.length) longestArr.push(arr);
-  });
+  let longestStrings = array.filter((element) => element.length == longString);
 
-  return longestArr;
+  return longestStrings;
 }
 
-console.log(allLongestStrings(["aba", "aa", "ad", "vcd", "aba"]));
-console.log(allLongestStrings(["abcd", "a", "", "abcde", "efg"]));
+allLongestString(["damian", "eme", "james", "damian"]);

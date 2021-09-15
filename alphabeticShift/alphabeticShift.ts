@@ -1,5 +1,5 @@
-function alphabeticShift(inputString: string): string {
-  const alphabet: string[] = [
+function alphabeticShift(inPutString: string) {
+  let alphabet = [
     "a",
     "b",
     "c",
@@ -27,16 +27,11 @@ function alphabeticShift(inputString: string): string {
     "y",
     "z",
   ];
-  let shiftedInputString = inputString.split("");
-  for (let i = 0; i < inputString.length; i++) {
-    let index = 0;
-    if (shiftedInputString[i] !== "z") {
-      index = alphabet.indexOf(shiftedInputString[i]) + 1;
-    }
-    shiftedInputString[i] = alphabet[index];
-  }
-  return shiftedInputString.join("");
-}
 
-console.log(alphabeticShift("crazy"));
-console.log(alphabeticShift("mado"));
+  let arrayString = inPutString.split("");
+
+  for (let i = 0; i < inPutString.length; i++) {
+    console.log(alphabet[alphabet.indexOf(arrayString[i]) + 1]);
+  }
+}
+alphabeticShift("abxzz");

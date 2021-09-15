@@ -1,18 +1,8 @@
-function addTwoDigits(n: any): number {
-  const strArr = n.toString().split("");
+function addNumber(n: number): number | String {
+  let numArray = n.toString().split("");
+  if (numArray.length > 2) return "not more than two digits";
 
-  // more than two digit
-  return strArr.reduce(
-    (acc: string, cur: string) => parseInt(acc) + parseInt(cur)
-  );
-
-
-  // let sumOfArr = 0;
-  // for ( var i = 0; i < strArr.length; i++) {
-  //   sumOfArr += parseInt(strArr[i]);
-  // }
-  // return sumOfArr;
+  let sum = parseInt(numArray[0]) + parseInt(numArray[1]);
+  return sum;
 }
-
-console.log(addTwoDigits(292));
-console.log(addTwoDigits(6909));
+console.log(addNumber(29));

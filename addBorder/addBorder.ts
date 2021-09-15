@@ -10,7 +10,6 @@ function addBorder(picture: string[]): any {
   //this
   // picture.unshift(border);
   // picture.push(border);
-
   //or this
   const newPicture = Array.from(new Set([border])).concat(
     picture,
