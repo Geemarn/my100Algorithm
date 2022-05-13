@@ -11,4 +11,4 @@ return arr[n];
 
 }
 
-console.log(fibonacci(4));
+console.log(fibonacci(1000));

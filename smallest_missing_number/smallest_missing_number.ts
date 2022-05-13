@@ -15,4 +15,4 @@ const smallestMissingNum = (arr) => {
 
 };
 
-console.log(smallestMissingNum([0, 1, 2,4, 5]));
+console.log(smallestMissingNum([-1, -4]));
