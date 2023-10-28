@@ -118,3 +118,23 @@ function solution5(A) {
   }
 }
 console.log(solution5([1,2,3,4,5]));
+
+function fizzBuzz(n) {
+  // Write your code here
+  for(let i = 1; i <= n; i++){
+    let dividedBy3 = i%3 === 0;
+    let dividedBy5 = i%5 === 0;
+    if (dividedBy3 && dividedBy5){
+      console.log('FizzBuzz')
+    } else if (dividedBy3) {
+      console.log('Fizz')
+    } else if(dividedBy5){
+      console.log('Buzz')
+    } else {
+      console.log(i)
+    }
+  }
+}
+
+console.log(fizzBuzz(55))
+

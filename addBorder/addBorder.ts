@@ -10,13 +10,12 @@ function addBorder(picture: string[]): any {
   //this
   // picture.unshift(border);
   // picture.push(border);
-
   //or this
   const newPicture = Array.from(new Set([border])).concat(
     picture,
     Array.from(new Set([border]))
   );
-
+  console.log(newPicture)
   for (let i = 1; i < newPicture.length - 1; i++) {
     newPicture[i] = "*".concat(newPicture[i], "*");
   }
