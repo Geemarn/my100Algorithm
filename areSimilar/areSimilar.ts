@@ -40,7 +40,7 @@ function areSimilar2(arr1: number[], arr2: number[]): boolean {
   return true;
 }
 
-console.log(areSimilar2([], []));
-console.log(areSimilar2([1, 2, 3], [2, 1, 3]));
-console.log(areSimilar2([1, 2, 2, 3], [2, 1, 3, 2]));
-console.log(areSimilar2([1, 2, 2,1,1], [2, 1, 1,2,0]));
+console.log(areSimilar([], []));
+console.log(areSimilar2([1, 2, 3, 3], [2, 1, 3, 4]));
+console.log(areSimilar([1, 2, 2, 3], [2, 1, 3, 2]));
+console.log(areSimilar([1, 2, 2,1,1], [2, 1, 1,2,0]));

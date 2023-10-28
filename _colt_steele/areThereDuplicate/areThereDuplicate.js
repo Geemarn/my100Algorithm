@@ -1,7 +1,6 @@
 //solution1 => frequency counter
 function areThereDuplicate (...args) {
   let frequencyCount = {};
-
   for (let val of args) {
     frequencyCount[val] = (frequencyCount[val] || 0) + 1;
   }

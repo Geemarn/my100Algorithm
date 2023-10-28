@@ -12,7 +12,7 @@ console.log(linearSearch(['a', 'b', 'c', 'd'], ''));
 function binarySearch <T>(arr:Array<T>, val:T): number {
   let leftPointer = 0;
   let rightPointer = arr.length - 1 ;
-  let middlePointer = Math.floor((leftPointer + rightPointer ) / 2);
+  let middlePointer =  Math.floor((leftPointer + rightPointer ) / 2);
   while (arr[middlePointer] !== val && leftPointer <= rightPointer) {
     if (arr[middlePointer] > val) rightPointer = middlePointer - 1;
     else leftPointer = middlePointer + 1;
@@ -21,7 +21,7 @@ function binarySearch <T>(arr:Array<T>, val:T): number {
   return arr[middlePointer] === val ? middlePointer : -1;
 };
 
-console.log(binarySearch(['a', 'b', 'c', 'd'], 'b'));
+console.log(binarySearch(['a', 'b', 'c', 'd' ,'e'], 'e'));
 
 //naive string search
 function strSearch (longStr: string, str: string): number {
@@ -36,5 +36,12 @@ function strSearch (longStr: string, str: string): number {
 
   return count;
 }
+//kmp search
+function KMPSearch (str: string, pattern: string): number {
+  let lengthOfStr = str.length;
+  let lengthOfPattern = pattern.length;
+  let IPS = new Array(lengthOfPattern).fill(0)
+  return IPS;
+}
 
-console.log(strSearch('i am a blessing to my world', 'world'));
+console.log(KMPSearch('i am a blessing to my world worlds', 'world'));

@@ -1,7 +1,7 @@
 class Store {
   // stripe: any;
   paypal: Record<string, any>;
-  constructor(user) {
+  constructor() {
     // this.stripe = new Stripe(user);
     this.paypal = new Paypal()
   }
@@ -33,7 +33,7 @@ class Paypal {
   }
 }
 
-const store = new Store('John');
+const store = new Store();
 store.purchaseBike(10);
 store.purchaseHelmet(10);
 
@@ -48,7 +48,7 @@ class Store2 {
   }
 
   purchaseBike (quantity) {
-    this.paymentProcessor.pay(200 * quantity)
+     this.paymentProcessor.pay(200 * quantity)
   }
 
   purchaseHelmet (quantity) {
@@ -104,3 +104,8 @@ class Paypal2 {
 const store3 = new Store2(new PaypalPaymentProcessor('John'));
 store3.purchaseBike(10);
 store3.purchaseHelmet(10);
+
+let a = [1,2,3]
+a[10] = 99
+
+console.log(a)

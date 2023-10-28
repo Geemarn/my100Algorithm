@@ -9,12 +9,9 @@ function solution (N: number): number {
     // Convert to binary
     const Binary = N.toString(2).split('');
     console.log(N.toString(2));
-
     // calling our recursive function with initial empty gaps
     return getGaps(Binary, []);
-
   }
-
   // default if it doesn't meet the requirements
   return 0;
 }
@@ -26,7 +23,6 @@ function getGaps (BinaryArray: Array<string>, gaps: Array<number>) {
     // new array created taking a slice of original array
     // from the index of the firstOne + 1 index
     let NewBinaryArray = BinaryArray.slice(firstOne + 1);
-
     // finding second one via its index in new array slice
     const secondOne = NewBinaryArray.indexOf("1");
     // accounting for no zeros

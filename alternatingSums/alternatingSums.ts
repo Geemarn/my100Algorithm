@@ -1,8 +1,7 @@
-function alternatingSums(a: number[]): number[] {
+function alternatingSums(arr: number[]): number[] {
   let evenSum = 0;
   let oddSum = 0;
-
-  a.forEach((el: number, index) => {
+  arr.forEach((el: number, index) => {
     if (index % 2 === 0) {
       evenSum += el;
     } else {

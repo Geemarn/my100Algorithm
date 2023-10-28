@@ -14,9 +14,22 @@ function findLongestSubString(str) {
     // store the index of the next char so as to not double count
     seen[char] = i + 1;
   }
+  console.log(seen)
   return longest;
 }
 
+// function findLongestSubString(str) {
+// let longestStr = '';
+// let counter = {}
+//
+// for (let i=0; i < str.length; i++) {
+//   let char = str[i];
+//   if(counter[char]) {
+//     return
+//   }
+// }
+//   return str.length;
+// }
 console.log(findLongestSubString('longestsubstring'));
-console.log(findLongestSubString('bbbbbbb'));
-console.log(findLongestSubString('thisisawesome'));
+// console.log(findLongestSubString('bbbbbbb'));
+// console.log(findLongestSubString('thisisawesome'));

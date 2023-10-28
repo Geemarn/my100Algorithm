@@ -1,4 +1,3 @@
-
 /** swap **/
 const swap = (arr, idx1, idx2) => [arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]];
 
@@ -105,3 +104,50 @@ function mergeSort <T>(arr1: Array<T>, arr2: Array<T>) {
 }
 
 console.log(mergeSort([11, 13, 17, 19], [ -4, 0, 1]));
+
+function findEvenIndex(arr) {
+  //sliding window pattern
+  let leftSum = 0;
+  //add all values in the array
+  let rightSum = arr.reduce((acc, curr) => acc + curr , 0)
+
+  for (let i=0; i < arr.length; i++){
+    //add array element to leftsum
+    if(i > 0) leftSum += arr[i - 1];
+    console.log(leftSum)
+    //subtract arr element from rightSum
+    rightSum -= arr[i]
+    console.log(rightSum)
+    // return index if leftSum equals rightSum
+    if (leftSum === rightSum) return i
+  }
+
+  //if no returned value return -1
+  return rightSum
+
+}
+
+console.log(findEvenIndex([1,2,3,4,3,2,1]))
+
+function twoSum(numbers, target) {
+  //take ist number and loop other through it
+  for(let i=0; i < numbers.length - 1; i++) {
+    for(let j=1; j < numbers.length; j++) {
+      let sum = numbers[i] + numbers[j];
+      if(sum === target) return [i, j]
+    }
+  }
+  return [0, 0]
+}
+
+console.log(twoSum([-783, 694, 873, 191, 877, 715], 1068))
+
+
+//KMPSearch
+function KMPSearch(text, pat) {
+  //calc length of text and pattern
+  const textlen = text.length;
+  const patlen = pat.length;
+
+
+}
